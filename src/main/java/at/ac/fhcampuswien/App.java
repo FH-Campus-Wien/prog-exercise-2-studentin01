@@ -48,22 +48,22 @@ public class App {
         public static void main (String[]args){
             App exercise2 = new App();
 
-            System.out.println("Task 1: Largest Number");
+            //System.out.println("Task 1: Largest Number");
             exercise2.largestNumber();
 
-            System.out.println("\nTask 2: Stairs");
+            //System.out.println("\nTask 2: Stairs");
             exercise2.stairs();
 
-            System.out.println("\nTask 3: Pyramide");
+            //System.out.println("\nTask 3: Pyramide");
             exercise2.printPyramid();
 
-            System.out.println("\nTask 4: Raute");
-            //exercise2.printRhombus();
+            //System.out.println("\nTask 4: Raute");
+            exercise2.printRhombus();
 
-            System.out.println("\nTask 5: Notendurchschnitt");
-            //exercise2.marks();
+            //System.out.println("\nTask 5: Notendurchschnitt");
+            exercise2.marks();
 
-            System.out.println("\nTask 6: Fröhliche Zahlen");
-            //exercise2.happyNumbers();
+            //System.out.println("\nTask 6: Fröhliche Zahlen");
+            exercise2.happyNumbers();
         }
     }
