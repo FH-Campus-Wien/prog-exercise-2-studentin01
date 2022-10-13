@@ -7,11 +7,45 @@ public class App {
     //todo Task 1
     public void largestNumber() {
         // input your solution here
+        Scanner scan = new Scanner(System.in);
+        int i = 1;
+        double num, largestNum;
+        System.out.print("Number " + i + ": ");
+        num = scan.nextDouble();
+        largestNum = num;
+        if (num <= 0)
+            System.out.println("No number entered.");
+        else {
+            while(i > 0) {
+                i++;
+                System.out.print("Number " + i + ": ");
+                num = scan.nextDouble();
+                if (num > largestNum)
+                    largestNum = num;
+                if(num <= 0)
+                    break;
+            }
+            System.out.printf("The largest number is %.2f\n", largestNum);
+        }
     }
 
     //todo Task 2
     public void stairs() {
         // input your solution here
+        Scanner scan = new Scanner(System.in);
+        System.out.print("n: ");
+        int a = 1;
+        int num = scan.nextInt();
+        if (num <= 0)
+            System.out.println("Invalid number!");
+
+        else for (int i = 0; i < num; i++) {
+            for (int k = 0; k <= i; k++) {
+                System.out.print(a + " ");
+                a++;
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 3
@@ -30,20 +64,41 @@ public class App {
         }
     }
 
-        //todo Task 4
-        public void printRhombus () {
-            // input your solution here
-        }
+    //todo Task 4
+    public void printRhombus() {
+        // input your solution here
+    }
 
         //todo Task 5
         public void marks () {
             // input your solution here
         }
 
-        //todo Task 6
-        public void happyNumbers () {
-            // input your solution here
-        }
+    //todo Task 6
+    public void happyNumbers() {
+        // input your solution here
+                Scanner scan = new Scanner(System.in);
+
+                int n, r = 1, num, sum = 0;
+
+                System.out.print("n: ");
+                n = scan.nextInt();
+                num = n;
+                while (num > 9) {
+                    while (num > 0) {
+                        r = num % 10;
+                        sum = sum + (r * r);
+                        num = num / 10;
+                    }
+                    num = sum;
+                    sum = 0;
+                }
+                if (num == 1) {
+                    System.out.println("Happy number!");
+                } else {
+                    System.out.println("Sad number!");
+                }
+            }
 
         public static void main (String[]args){
             App exercise2 = new App();
