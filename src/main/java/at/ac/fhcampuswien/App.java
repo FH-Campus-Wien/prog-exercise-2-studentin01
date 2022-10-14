@@ -86,11 +86,10 @@ public class App {
                 if (mark < 0 || mark > 5) {
                     System.out.println("Invalid mark!");
                     i = i-1;
-                    continue;
                 }
-                sum = sum + mark;
+                sum += mark;
                 if(mark == 5)
-                    count = count + 1;
+                    count += 1;
                 if (mark == 0) {
                     break;
                 }
