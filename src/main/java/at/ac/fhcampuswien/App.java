@@ -1,5 +1,6 @@
 package at.ac.fhcampuswien;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class App {
@@ -67,11 +68,40 @@ public class App {
     //todo Task 4
     public void printRhombus() {
         // input your solution here
+
     }
 
         //todo Task 5
         public void marks () {
             // input your solution here
+            Scanner scan = new Scanner(System.in);
+
+            int mark, i;
+            int sum = 0, count = 0;
+
+            for(i = 1;  i > 0; i++){
+                System.out.print("Mark " + i + ": ");
+                mark = scan.nextInt();
+
+                if (mark < 0 || mark > 5) {
+                    System.out.println("Invalid mark!");
+                    i = i-1;
+                    continue;
+                }
+                sum = sum + mark;
+                if(mark == 5)
+                    count = count + 1;
+                if (mark == 0) {
+                    break;
+                }
+            }
+            if(sum == 0)
+                System.out.printf("Average: %.2f\n", 0.00);
+            else {
+                double average = (double) sum / (i-1);
+                System.out.printf("Average: %.2f\n", average);
+            }
+            System.out.println("Negative marks: " + count);
         }
 
     //todo Task 6
